@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    const myDiv = document.getElementById('myDiv');
+    if (myDiv && myDiv.hasOwnProperty('nonExistentProperty')) {
+      alert(myDiv.nonExistentProperty);
+    } else {
+      console.log("Property 'nonExistentProperty' does not exist on myDiv.");      
+      //Handle the case where the property is missing gracefully
+    }
+  </script>
+</body>
+</html>
